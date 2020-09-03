@@ -16,18 +16,6 @@ const numeroUno = document.getElementById('btn-uno');
 const numeroZero = document.getElementById('btn-cero');
 const resetc = document.getElementById('btn-c');
 const igual = document.getElementById('btn-igual');
-const numero;
-
-
-
-numeroNueve.onclick = function(e)
-{
-    userInput.textContent = userInput.textContent + "9";
-    alert(userInput.value);
-}
-
- 
-
 const currentResultOutput = document.getElementById('current-result');
 const currentCalculationOutput = document.getElementById('current-calculation');
 
@@ -36,6 +24,12 @@ function outputResult(result, text) {
   currentCalculationOutput.textContent = text;
 }
 
-// Eventos
+numeroNueve.onclick = function(e)
+{
+    userInput.value = userInput.value + "9";
+    alert(userInput.value);
+}
+
+
 
 
