@@ -1,7 +1,8 @@
 const historial = [];
 let defaultResult = 0;
 let currentResult = defaultResult;
-let operacion;
+let operacion = 0;
+
 
 
 function suma()
@@ -42,25 +43,26 @@ function calcular(operador)
 {
     if(operador === 'suma')
     {
-        currentResult =  currentResult + parseInt(userInput.value);
+        userInput.value += "+"  ;
     }else if(operador === 'resta')
     {        
-        currentResult = currentResult - parseInt(userInput.value);
+        userInput.value += "-"  ;
 
     }else if (operador === 'multiplicacion')
     {
-        currentResult = currentResult * parseInt(userInput.value); 
+        userInput.value += "*"  ;
 
     }else if(operador === 'division')
     {
-        currentResult = currentResult / parseInt(userInput.value);
+        userInput.value += "/"  ;
     }
     outputResult(currentResult, currentResult);
-    userInput.value = '';
+    
 }
+
 igual.onclick = function(e)
 {
-   userInput.value = currentResult;
+   userInput.value = eval(userInput.value);
 }
 
 

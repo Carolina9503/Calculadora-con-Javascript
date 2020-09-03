@@ -27,7 +27,7 @@ function outputResult(result, text) {
 
 numeroNueve.onclick = function(e)
 {
-    userInput.value = userInput.value + "9";
+    userInput.value += "9";
 }
 numeroOcho.onclick = function(e)
 {
