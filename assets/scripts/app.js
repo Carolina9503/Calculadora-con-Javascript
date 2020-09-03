@@ -1,7 +1,7 @@
 const historial = [];
 let defaultResult = 0;
 let currentResult = defaultResult;
-let numeroMarcado = 0;
+let operacion;
 
 
 function suma()
@@ -58,7 +58,10 @@ function calcular(operador)
     outputResult(currentResult, currentResult);
     userInput.value = '';
 }
-
+igual.onclick = function(e)
+{
+   userInput.value = currentResult;
+}
 
 
 
