@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculadora bootcamp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/app.css" />
+
+  </head>
+  <body>
+    <header>
+      <h1 id="titulo">Calculadora bootcamp</h1>
+    </header>
+
+    <section id="calculator">
+      <input type="number" id="input-number" />
+      <div id="calc-actions">
+        <button type="button" id="btn-siete">7</button>
+        <button type="button" id="btn-ocho">8</button>
+        <button type="button" id="btn-nueve">9</button>
+        <button type="button" id="btn-divide">/</button>      
+      </div>
+      <div id="calc-actions">
+        <button type="button" id="btn-cuatro">4</button>
+        <button type="button" id="btn-cinco">5</button>
+        <button type="button" id="btn-seis">6</button>
+        <button type="button" id="btn-multiply">*</button>      
+      </div>
+      <div id="calc-actions">
+        <button type="button" id="btn-uno">1</button>
+        <button type="button" id="btn-dos">2</button>
+        <button type="button" id="btn-tres">3</button>
+        <button type="button" id="btn-subtract">-</button>      
+      </div>
+      <div id="calc-actions">
+        <button type="button" id="btn-cero">0</button>
+        <button type="button" id="btn-c">c</button>
+        <button type="button" id="btn-igual">=</button>
+        <button type="button" id="btn-add">+</button>      
+      </div> 
+    </section>
+    <section id="results">  
+      <button type="button" id="btn-historial">Historial</button>
+      <h2 id="current-calculation">0</h2>
+      <h2>Result: <span id="current-result"></span></h2>
+    </section>
+    <script src="assets/scripts/vendor.js"></script>
+    <script src="assets/scripts/app.js"></script>
+  </body>
+</html>
