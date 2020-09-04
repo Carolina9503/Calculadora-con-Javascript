@@ -8,15 +8,15 @@ html {
 
 body {
   margin: 0;
+  background-image: url("../img/fondo1.jpg");
 }
 #input-number{
   border-radius: 10px;
 }
 
-
 header {
-  background: #000;
-  color: white;
+  background: rgb(226, 223, 223);
+  color: rgb(26, 24, 24);
   padding: 1rem;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -24,7 +24,7 @@ header {
 }
 
 #titulo :hover{
-  background:#4285f4 ;
+  color:rgb(179, 160, 160) ;
 }
 
 #results,
@@ -32,7 +32,7 @@ header {
   margin: 2rem auto;
   width: 30rem;
   max-width: 90%;
-  border: 1px solid #4285f4;
+  border: 1px solid rgb(226, 223, 223);
   border-radius: 10px;
   padding: 1rem;
   color: #4285f4;
@@ -88,8 +88,9 @@ header {
   text-align: center;
 }
 #btn-historial{
-  background: #084f88;
-  color: white;
+  background: #dfe1e5;
+  color: #202124;
+  width: 30%;
 }
 #calculator, #results {  
   border-block-start-width: 20px;

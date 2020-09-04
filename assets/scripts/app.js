@@ -5,64 +5,67 @@ let operacion = 0;
 
 
 
-function suma()
-{
+addBtn.addEventListener('click',function(){
     calcular('suma');
-}
-addBtn.addEventListener('click',suma);
+});
 
-
-function resta()
-{
+subtractBtn.addEventListener('click',function(){
     calcular('resta');
-}
-subtractBtn.addEventListener('click',resta);
+});
 
-
-function multiplicacion()
-{
+multiplyBtn.addEventListener('click',function(){
     calcular('multiplicacion');
-}
-multiplyBtn.addEventListener('click',multiplicacion); 
+}); 
 
-
-function division()
-{
+divideBtn.addEventListener('click',function(){
     calcular('division');
-}
-divideBtn.addEventListener('click',division); 
+}); 
 
 
 function arregloHistorial()
 {
-    alert(historial);
+    alert("Los resultados almacenados son: " + historial);
 }
 historialBtn.addEventListener('click',arregloHistorial);
 
 function calcular(operador)
 {
-    if(operador === 'suma')
+    switch (operador)
     {
-        userInput.value += "+"  ;
-    }else if(operador === 'resta')
-    {        
-        userInput.value += "-"  ;
+        case 'suma':
+            userInput.value += "+"  ;
+            break;
+        case 'resta':
+            userInput.value += "-"  ;
+            break;
+        case 'multiplicacion':
+            userInput.value += "*"  ;
+            break;
+        case 'division':
+            userInput.value += "/"  ;
+            break;    
 
-    }else if (operador === 'multiplicacion')
-    {
-        userInput.value += "*"  ;
-
-    }else if(operador === 'division')
-    {
-        userInput.value += "/"  ;
     }
+   
     outputResult(currentResult, currentResult);
     
 }
+igual.onclick = function()
+ {
+     if(!isNaN(userInput.value.charAt(userInput.value.length-1)))
+     {
+        userInput.value = eval(userInput.value);
+        historial.push(userInput.value);
+     }else
+     {
+         alert("El ultimo valor no es un numero");
+         userInput.value = "";
+     }
+}
 
-igual.onclick = function(e)
+resetc.onclick = function()
 {
-   userInput.value = eval(userInput.value);
+    userInput.value = "";
 }
 
 
