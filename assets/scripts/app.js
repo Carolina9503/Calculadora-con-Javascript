@@ -1,55 +1,15 @@
-const historial = [];
-let defaultResult = 0;
-let currentResult = defaultResult;
-let operacion = 0;
 
-
-
-addBtn.addEventListener('click',function(){
-    calcular('suma');
-});
-
-subtractBtn.addEventListener('click',function(){
-    calcular('resta');
-});
-
-multiplyBtn.addEventListener('click',function(){
-    calcular('multiplicacion');
-}); 
-
-divideBtn.addEventListener('click',function(){
-    calcular('division');
-}); 
-
-
-function arregloHistorial()
+//innerText me trae el texto que esta entre el boton; Array.prototype.forEach.call(teclas, (tecla) toma la lista y la deja navegar
+Array.prototype.forEach.call(teclas, (tecla) =>
 {
-    alert("Los resultados almacenados son: " + historial);
-}
-historialBtn.addEventListener('click',arregloHistorial);
-
-function calcular(operador)
-{
-    switch (operador)
+    tecla.onclick = () => 
     {
-        case 'suma':
-            userInput.value += "+"  ;
-            break;
-        case 'resta':
-            userInput.value += "-"  ;
-            break;
-        case 'multiplicacion':
-            userInput.value += "*"  ;
-            break;
-        case 'division':
-            userInput.value += "/"  ;
-            break;    
+        userInput.value += tecla.innerText;
+    };   
+});
 
-    }
-   
-    outputResult(currentResult, currentResult);
-    
-}
+historialBtn.onclick = () => alert("Los resultados almacenados son: " + historial);
+
 igual.onclick = function()
  {
      if(!isNaN(userInput.value.charAt(userInput.value.length-1)))
@@ -63,10 +23,7 @@ igual.onclick = function()
      }
 }
 
-resetc.onclick = function()
-{
-    userInput.value = "";
-}
+resetc.onclick = ()=> userInput.value = "";
 
 
 
