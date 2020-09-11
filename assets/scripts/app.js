@@ -43,26 +43,42 @@ function cambiarColor(){
     
 }
 // codigo para agregar nodos en este caso se agrego un array de botones
-function calculadoraCientifica()
+function calculadoraCientifica(botones,elementoPadre)
 {
-    if( esCientifica === false)
-    { 
-        let botones = ['Pi','i','e'];
-        let elemento = document.getElementById('calc-actions1');
+    // if( esCientifica === false)
+    // { 
+        
+        let elemento = document.getElementById(elementoPadre);
         for (let i = 0; i < botones.length; i++) {
             let boton = document.createElement('button');
             boton.innerText = botones[i];
             elemento.appendChild(boton);
             
-        }       
-        esCientifica = true;
-    }else
-    {
-        location.reload();
-    } 
+        }   
+        
+        // esCientifica = true;
+    // }else
+    // {
+    //     location.reload();
+    // } 
     
 }
-calculadoraCient.addEventListener('click',calculadoraCientifica);
+function cambiarCalculadoraCientifica()
+{
+    let botones = ['Pi','i','e'];
+    calculadoraCientifica(botones,'calc-actions1');
+
+   botones = ['sen','cos','tan'];
+    calculadoraCientifica(botones,'calc-actions2');
+
+   botones = ['exp','log','In'];
+    calculadoraCientifica(botones,'calc-actions3');
+
+    botones = ['base','asin','acos'];
+    calculadoraCientifica(botones,'calc-actions4');
+}
+
+calculadoraCient.addEventListener('click',cambiarCalculadoraCientifica);
 
 
 // codigo para eliminar nodos en este caso se elimino un <P id="parrafo">
@@ -74,4 +90,6 @@ function eliminarNodos()
 
 }
 eliminarNodo.onclick = () => eliminarNodos();
+
+
 
