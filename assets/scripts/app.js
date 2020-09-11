@@ -8,7 +8,10 @@ for (const tecla of teclas)
     };   
 };
 
-historialBtn.onclick = () => alert("Los resultados almacenados son: " + historial);
+historialBtn.onclick = () =>{
+    cambiarColor()
+    alert("Los resultados almacenados son: " + historial);
+} 
 
 igual.onclick = function()
  {
@@ -30,4 +33,11 @@ function alerta()
     window.confirm("El ultimo valor no es un numero");
 }
 
-
+function cambiarColor(){
+    let calc = document.getElementById('results');
+    let hijos = calc.children;
+    for(let i= 0; i<hijos.length; i++){
+       hijos[i].style.backgroundColor = "#4285f4"
+    }
+    
+}
