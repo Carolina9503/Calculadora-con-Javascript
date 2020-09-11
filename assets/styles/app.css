@@ -30,7 +30,7 @@ header {
 #results,
 #calculator {
   margin: 2rem auto;
-  width: 30rem;
+  width: 36rem; /*se cambio tamaño de 30 a 50 para la calculadora cientifica */
   max-width: 90%;
   border: 1px solid rgb(226, 223, 223);
   border-radius: 10px;
@@ -67,6 +67,7 @@ header {
   cursor: pointer;
   border: 1px solid #dfe1e5;
   border-radius: 4px;
+  margin-left: 8px; /*se le coloco este margin para generar espacios entre botones */
 }
 
 #calculator button:focus {
@@ -79,11 +80,11 @@ header {
   border-color: #4285f4;
 }
 
-#calc-actions button {
+.calc-actions button {
   width: 4rem;
 }
 
-#calc-actions {
+.calc-actions {
   margin-top: 1rem;
   text-align: center;
 }
